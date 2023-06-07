@@ -8,7 +8,8 @@ Root password needs to be changed to meet complexity requirements.|`sudo -i pass
 All users should be added to their appropriate groups and permissions.|`cut -d ":" -f 1 /etc/passwd`
 Lock out all zombie accounts.|`sudo passwd -l username`
 Do not allow Rick Grime's home directory to be globally readable.|`sudo chmod 700 <directory name(readable for user and root)>`<br>`sudo chmod 0000 <directory name (readable only by root)>`
-All accounts should be secured with a password.|`passwd --status username`
+Look at all accounts to see all users. Any with L that is not a zombie should be secured with a password.|`sudo passwd --status <username>`
+All accounts should be secured with a password.|`sudo passwd --status <username>`
 Disable SSH access to disabled users.|``
 Enable Ubuntu firewall.|`sudo ufw enable`
 Open port 8080 in firewall.|`sudo ufw allow 8080`
