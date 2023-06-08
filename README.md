@@ -25,7 +25,7 @@ Apply password minimum length.<br>Apply password complexity.|`sudo nano /etc/pam
 Enable auditd to monitor the system.|`service auditd start`
 Find all noowner files and delete them.|`find / -nogroup -nouser`
 Scan for rootkits.|`sudo chkrootkit`
-Change SSH default port 22 to any higher number.|`sudo nano /etc/ssh/sshd_config`<br> change line #Port 22 to Port <port number>
+Change SSH default port 22 to any higher number.|`sudo nano /etc/ssh/ssh_config`<br> change line #Port 22 to Port <port number>
 Disable root login access.|`sudo passwd -l root`
 One Step User Cron jobs Removal|`crontab -l`<br>`mv /var/spool/cron  /var/spool/cron_is_disabled`
 Line by line cron job removal|`sudo nano crontab -e` then comment out each line you don't want to run with #
