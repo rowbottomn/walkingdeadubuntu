@@ -27,8 +27,7 @@ Find all noowner files and delete them.|`find / -nogroup -nouser`
 Scan for rootkits.|`sudo chkrootkit`
 Change SSH default port 22 to any higher number.|`sudo nano /etc/ssh/sshd_config`<br> change line #Port 22 to Port <port number>
 Disable root login access.|`sudo passwd -l root`
-View all cron jobs.|`sudo crontab -u <userName> -l`<br>`sudo crontab -l`<br>[more info](https://www.cyberciti.biz/faq/linux-show-what-cron-jobs-are-setup/)
-Lockdown cronjobs. |First backup the cron jobs file `crontab -l > my_cron_backup.txt`<br>Then you can empty it:`crontab -r`<br>To restore:`crontab my_cron_backup.txt`<br>
 One Step User Cron jobs Removal|`crontab -l`<br>`mv /var/spool/cron  /var/spool/cron_is_disabled`
 Line by line cron job removal|`sudo nano crontab -e` then comment out each line you don't want to run with #
-
+View all cron jobs.|`sudo crontab -u <userName> -l`<br>`sudo crontab -l`<br>[more info](https://www.cyberciti.biz/faq/linux-show-what-cron-jobs-are-setup/)
+Lockdown cronjobs. |First backup the cron jobs file `crontab -l > my_cron_backup.txt`<br>Then you can empty it:`crontab -r`<br>To restore:`crontab my_cron_backup.txt`<br>
