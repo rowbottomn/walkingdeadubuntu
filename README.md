@@ -19,7 +19,7 @@ Enable Ubuntu firewall.|`sudo ufw enable`
 Open port 8080 in firewall.|`sudo ufw allow 8080`  
 Close port 22 and 23.|`sudo ufw deny 22`<br>`sudo ufw deny 23`  
 Download and install any packages required in the readme file.|`sudo apt install <packagename>`
-Encrpyt Linux file system completely.|`sudo apt-get install ecryptfs-utils cryptsetup`<br>`sudo ecryptfs-migrate-home -u user`
+Encrypt Linux file system completely.|`sudo apt-get install ecryptfs-utils cryptsetup`<br>`sudo ecryptfs-migrate-home -u user`
 Apply appropriate lockout policies.| [Check out these commands to learn more](https://websistent.com/linux-password-lockout-policy/)
 Apply password minimum length.<br>Apply password complexity.|`sudo nano /etc/pam.d/common-password`<br>make changes to (minlen) password [success=1 default=ignore] pam_unix.so obscure sha512 minlen=12
 Enable auditd to monitor the system.|`service auditd start`
