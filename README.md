@@ -12,7 +12,7 @@ Navigate to the directory that contains all user home directories for the next l
 Make sure the Zombies home directories are only accessible by root|`sudo chmod 0000 <zombie home directory name>`  
 Do not allow Rick Grime's home directory to be globally readable.|`sudo chmod 700 <directory name(readable for user and root)>`  
 Look at all accounts to see all users. <br>Any with L that is not a zombie should be secured with a password.|`sudo passwd --status -a`  
-All accounts should be secured with a password.<br>Make a generic password for all Zombies|`sudo passwd <username>`  
+All accounts should be secured with a password.<br>Make a generic password for all non-zombies|`sudo passwd <username>`  
 Expire their password to force them to reset on next login|`sudo passwd -e <username>`
 Disable SSH access to disabled users. |`sudo nano /etc/ssh/sshd_config`  
 Enable Ubuntu firewall.|`sudo ufw enable`
